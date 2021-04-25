@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* general containers */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.landing-top {
+    height: 768px;
+    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+
+/* general containers */
+
+
+/* general elements */
+.general-text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+}
+
+.general-heading {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.general-heading-mini {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    margin-bottom: 14px;
+}
+
+/* general elements */
+
+
+/* Navbar */
+.navbar {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: left;
+    list-style-type:none;
+}
+
+.navbar-logo {
+    height: 66px;
+}
+
+.navbar-item {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item a {
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #555273;
+    letter-spacing: 0.05em;
+}
+
+.navbar-item a:hover {
+    padding: 0;
+    color: #555273;
+    border-bottom: #555273 1px solid;
+}
+/* navbar */
+
+
+/* Landing-top */
+.landing-top-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.landing-top-text {
+    padding-top: 115px;
+    flex-grow: 1;
+    background-image: url("img/landing-top-img.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 45%;
+}
+
+.landing-top-text-primary {
+    font-family: 'Open Sans', sans-serif;
+    width: 510px;
+    font-size: 64px;
+    font-weight: 400;
+    color: #1F3F68;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+}
+
+.landing-top-text-secondary {
+    width: 425px;
+    margin: 16px 0;
+}
+
+.landing-top-button {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background: #5A98D0;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+    padding: 15px 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 71px;
+}
+/* landing-top */
+
+
+/* Topics we teach */
+.topics-we-teach {
+    padding-top: 64px;
+}
+
+.topics-cards-box {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.topic-card {
+    width: 359px;
+    padding: 44px 32px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topic-card-img {
+    align-self: center;
+    margin-bottom: 51px;
+}
+
+.topic-card-link {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #5A98D0;
+    text-decoration: none;
+}
+/* topics we teach */
+
+
+/* Featured courses */
+.featured-courses-item {
+    position: relative;
+    flex-grow: 1;
+}
+
+.featured-courses-item-margin {
+    margin-right: 32px;
+}
+
+.featured-courses-text {
+    width: 75%;
+    margin: 32px auto 64px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #222222;
+}
+
+.featured-courses-img {
+    width: 100%;
+}
+
+.featured-courses-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    position: absolute;
+    top: 64px;
+    right: 64px;
+}
+
+.featured-courses-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+/* featured courses */
+
+
+/* Footer */
+.footer {
+    max-height: 657px;
+    background: #316099;
+}
+
+
+.footer-feedback {
+    padding-top: 91px;
+    padding-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-feedback-heading {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 340px;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.footer-feedback-text {
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    opacity: 0.6;
+    max-width: 500px;
+}
+
+.footer-feedback-button-box {
+    display: flex;
+    align-items: center;
+}
+
+.footer-feedback-button {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background: #5A98D0;
+    text-decoration: none;
+    padding: 15px 50px;
+}
+
+
+.footer-first-box {
+    margin-top: 112px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.footer-contacts {
+    padding: 64px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contacts-item {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    width: 359px;
+}
+
+.footer-rights-reserved {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    opacity: 0.4;
+    margin-bottom: 50px;
+}
+
+
+/* footer */
+
+
+/* Каталог */
+
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 64px;
+    padding-bottom: 32px;
+}
+
+.catalog-item-card {
+    width: 359px;
+    margin-bottom: 32px;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.catalog-item-image {
+    align-self: center;
+    max-height: 200px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+}
+
+.catalog-item-title {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #5A98D0;
+    text-decoration: none;
+}
+
+.catalog-item-price-and-buy {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-item-buy-button {
+    font-size: 12px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background: #5A98D0;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+    padding: 5px 50px;
+    display: inline-block;
+}
+
+.catalog-item-buy-button:hover {
+    background: #555273;
+    cursor: pointer;
+}
+
+/* каталог */
+
+
+/* Contact us */
+
+.contacts-header {
+    background-image: url("img/contact-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-page-title {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 74px;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.contacts-title-comment {
+    color: #FFFFFF;
+    max-width: 780px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contacts-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 57px;
+}
+
+.contacts-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacts-image {
+    width: 300px;
+    height: 180px;
+    align-self: center;
+    margin-bottom: 56px;
+}
+
+.contacts-title {
+    margin: 40px 0 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+.contacts-address-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+}
+
+.contacts-list-items {
+    list-style: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+}
+
+
+.contact-form-container {
+    width: 540px;
+    height: 800px;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    margin-bottom: 96px;
+}
+
+.contact-form-title {
+    margin: 56px 56px 48px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 56px 56px;
+}
+
+.contact-form-label {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.contact-form-input {
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    opacity: 0.4;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    padding: 21px 12px 21px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+}
+
+.contact-form-btn {
+    margin-top: 50px;
+    height: 72px;
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    padding: 0;
+    border: none;
+}
+
+
+/* contact us */
+
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .landing-top-text {
+        background-position: right 280px;
+    }
+
+    .topics-cards-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topic-card {
+        margin-bottom: 32px;
+    }
+
+    .featured-courses-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .footer-contacts {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 667px) {
+    .general-heading {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .landing-top {
+        height: 480px;
+    }
+
+    .landing-top-content {
+        min-height: 376px;
+        padding-bottom: 41px;
+        box-sizing: border-box;
+    }
+
+    .landing-top-text {
+        padding-top: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+    }
+
+    .landing-top-text-primary {
+        width: 100%;
+        font-size: 32px;
+        line-height: 37px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .landing-top-text-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-item a {
+        display: none;
+    }
+
+    .landing-top-button {
+        font-size: 12px;
+        line-height: 26px;
+        padding: 0 8px;
+    }
+
+    .topics-we-teach {
+        padding-top: 48px;
+    }
+
+    .topics-cards-box {
+        padding-top: 32px;
+    }
+
+    .topic-card {
+        width: 100%;
+    }
+
+    .featured-courses-text {
+        width: 100%;
+    }
+
+    .featured-courses-group {
+        margin-top: 16px;
+        flex-direction: column;
+    }
+
+    .featured-courses-item-margin {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .featured-courses-title {
+        font-size: 14px;
+        line-height: 16px;
+        top: 16px;
+        right: 16px;
+    }
+
+    .footer {
+        height: 542px;
+    }
+
+    .footer-feedback {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .footer-feedback-heading {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .footer-feedback-text {
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .footer-feedback-button {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 2px 8px;
+    }
+
+    .footer-contacts-item {
+        width: 100%;
+    }
+}

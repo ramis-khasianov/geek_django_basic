@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Raport Learning</title>
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+<div class="container landing-top-content">
+    <!-- Навигационная панель -->
+    <div class="navbar">
+        <ul class="navbar-items">
+            <li class="navbar-item"><img class="navbar-logo" src="{% static 'img/logo.png' %}" alt="Rapport E-Learning"></li>
+            <li class="navbar-item"><a href="index.html">Главная</a></li>
+            <li class="navbar-item"><a href="catalog.html">Каталог</a></li>
+            <li class="navbar-item"><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+    <!-- Навигационная панель -->
+</div>
+
+
+<!-- Заголовок страницы контактов -->
+<div class="contacts-header">
+    <h2 class="contacts-page-title">Напишите нам</h2>
+    <p class="contacts-title-comment">Мы всегда открыты к вопросам и предложениями. Наша цель - счастливые клиенты, мы всегда рады обратной связи от вас.</p>
+</div>
+<!-- Заголовок страницы контактов -->
+
+
+<!-- Контейнер с контактами и формой связи-->
+<div class="container">
+    <div class="contacts-row">
+
+        <!-- Контакты которые слева -->
+        <div class="contacts-list-container">
+            <img class="contacts-image" src="{% static 'img/contact.png' %}" alt="contact us">
+            <div class="contacts-address">
+                <h4 class="contacts-title">Адрес</h4>
+                <p class="contacts-address-text">г. Москва, Пресненская набережная, дом 66</p>
+            </div>
+
+            <div class="contacts-address">
+                <h4 class="contacts-title">Телефон</h4>
+                <ul class="contacts-list-items">
+                    <li>+79161010100</li>
+                    <li>+79161010101</li>
+                </ul>
+            </div>
+
+            <div class="contacts-online">
+                <h4  class="contacts-title">Онлайн контакты</h4>
+                <ul class="contacts-list-items">
+                    <li><a href="index.html">raport.ru</a></li>
+                    <li><a href="mailto:info@elefut.com">info@raport.ru</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Контакты которые слева -->
+
+        <!-- Форма для связи которая справа -->
+        <div class="contact-form-container">
+            <p class="contact-form-title">Сообщение</p>
+            <form class="contact-form" action="#">
+                <label class="contact-form-label" for="name">Имя</label>
+                <input id="name" class="contact-form-input" type="text" placeholder="Ваше имя">
+                <label class="contact-form-label" for="email">Email</label>
+                <input id="email" class="contact-form-input" type="email" placeholder="Ваш email">
+                <label class="contact-form-label" for="message">Сообщение</label>
+                <textarea id="message" class="contact-form-input" placeholder="Ваше сообщение" rows="5"></textarea>
+                <button class="contact-form-btn" type="submit">Отправить</button>
+            </form>
+        </div>
+        <!-- Форма для связи которая справа -->
+
+    </div>
+</div>
+<!-- Контейнер с контактами и формой связи-->
+
+
+<!-- Виджет с картой -->
+<div class="container">
+
+
+    <div class="contacts-map">
+        <div style="position:relative;overflow:hidden;">
+            <a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a>
+            <a href="https://yandex.ru/maps/213/moscow/house/1_y_krasnogvardeyskiy_proyezd_11/Z04YcwNgQUUFQFtvfXt0cXRrYA==/?ll=37.542023%2C55.748919&utm_medium=mapframe&utm_source=maps&z=16.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">1-й Красногвардейский проезд, 11 — Яндекс.Карты</a>
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCUMnJw6oC" width="100%" height="480" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+    </div>
+</div>
+<!-- Виджет с картой -->
+
+
+<!-- Подвал -->
+<div class="footer footer-first-box">
+    <div class="container">
+        <div class="footer-feedback">
+            <div class="footer-feedback-text-box">
+                <h3 class="footer-feedback-heading">Есть вопросы?</h3>
+                <p class="footer-feedback-text">Напишите нам! Воспользуйтесь формой на сайте или свяжитесь с нами через контакты ниже.</p>
+            </div>
+            <div class="footer-feedback-button-box">
+                <a href="contacts.html" class="footer-feedback-button">Контакты</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-contacts">
+                <p class="footer-contacts-item">Rapport Online: Rapport E-Learning</p>
+                <p class="footer-contacts-item">+79161010100</p>
+                <p class="footer-contacts-item">info@raport.ru</p>
+            </div>
+            <p class="footer-rights-reserved">2021 Все права защищены</p>
+        </div>
+    </div>
+</div>
+<!-- Подвал -->
+
+
+</body>
+</html>

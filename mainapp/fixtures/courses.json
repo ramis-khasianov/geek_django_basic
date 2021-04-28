@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "course02.jpeg",
+    "title": "Что такое сервисный дизайн",
+    "description": "",
+    "type": "Course",
+    "price": 1300
+  },
+  {
+    "id": 2,
+    "image": "course01.jpeg",
+    "title": "Проектирование мобильного приложения",
+    "description": "",
+    "type": "Program",
+    "price": 10000
+  },
+  {
+    "id": 3,
+    "image": "course03.jpeg",
+    "title": "Управление изменениями",
+    "description": "",
+    "type": "Course",
+    "price": 1800
+  },
+  {
+    "id": 4,
+    "image": "course04.jpg",
+    "title": "Интернет вещей: Введение",
+    "description": "",
+    "type": "Course",
+    "price": 1600
+  },
+  {
+    "id": 5,
+    "image": "course05.jpg",
+    "title": "UX и UI для разрабочиков",
+    "description": "",
+    "type": "Course",
+    "price": 1600
+  },
+  {
+    "id": 6,
+    "image": "course06.jpg",
+    "title": "Создание дизайн системы для продуктов",
+    "description": "",
+    "type": "Course",
+    "price": 11000
+  }
+]

@@ -97,7 +97,7 @@ body {
 .landing-top-content {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: calc(100% - 120px);
 }
 
 .landing-top-text {

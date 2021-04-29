@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page title -->
+    <title>{{ title }}</title>
+
+    <!-- Basic CSS -->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template if any -->
+    {% block css %} {% endblock %}
+
+</head>
+
+<body>
+
+<!-- Навигационная панель -->
+<div class="container">
+    <div class="navbar">
+        <ul class="navbar-items">
+            <li class="navbar-item"><img class="navbar-logo" src="{% static 'img/logo.png' %}" alt="Rapport E-Learning"></li>
+            <li class="navbar-item"><a href="{% url 'index' %}">Главная</a></li>
+            <li class="navbar-item"><a href="{% url 'catalog' %}">Каталог</a></li>
+            <li class="navbar-item"><a href="{% url 'contacts' %}">Контакты</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Навигационная панель -->
+
+
+<!-- Page Content -->
+{% block content %} {% endblock %}
+
+{% block footer %} {% endblock %}
+<!-- Page Content -->
+
+
+<!-- Подвал -->
+<div class="footer footer-first-box">
+    <div class="container">
+        <div class="footer-feedback">
+            <div class="footer-feedback-text-box">
+                <h3 class="footer-feedback-heading">Есть вопросы?</h3>
+                <p class="footer-feedback-text">Напишите нам! Воспользуйтесь формой на сайте или свяжитесь с нами через контакты ниже.</p>
+            </div>
+            <div class="footer-feedback-button-box">
+                <a href="contacts.html" class="footer-feedback-button">Контакты</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-contacts">
+                <p class="footer-contacts-item">Rapport Online: Rapport E-Learning</p>
+                <p class="footer-contacts-item">+79161010100</p>
+                <p class="footer-contacts-item">info@raport.ru</p>
+            </div>
+            <p class="footer-rights-reserved">2021 Все права защищены</p>
+        </div>
+    </div>
+</div>
+<!-- Подвал -->
+
+</body>
+
+</html>

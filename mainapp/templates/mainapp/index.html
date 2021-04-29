@@ -1,35 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Raport Learning</title>
-    <link rel="stylesheet" href="static/style.css">
-</head>
-<body>
+{% extends 'mainapp/base.html' %}
 
+{% load static %}
 
-<!-- Лэндинг -->
-<div class="landing-top">
+{% block content %}
 
-    <!-- Первый контейнер - Лендинг -->
-    <div class="container landing-top-content">
-        <!-- Навигационная панель -->
-        <div class="navbar">
-            <ul class="navbar-items">
-                <li class="navbar-item"><img class="navbar-logo" src="static/img/logo.png" alt="Rapport E-Learning"></li>
-                <li class="navbar-item"><a href="index.html">Главная</a></li>
-                <li class="navbar-item"><a href="catalog.html">Каталог</a></li>
-                <li class="navbar-item"><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        <!-- Навигационная панель -->
-
+    <!-- Лэндинг -->
+    <div class="landing-top">
 
         <!-- Встречающий текст -->
-        <div class="landing-top-text">
+        <div class="landing-top-text container ">
             <h1 class="landing-top-text-primary">Онлайн-курсы будущего</h1>
             <p class="general-text landing-top-text-secondary">Начните учиться прямо сейчас! Более 100 онлайн-курсов по компетенциям и навыкам будущего.</p>
             <a href="#" class="landing-top-button">Перейти в каталог</a>
@@ -37,88 +16,57 @@
         <!-- Встречающий текст -->
 
     </div>
-    <!-- Первый контейнер - Лендинг -->
-
-</div>
-<!-- Лэндинг -->
+    <!-- Лэндинг -->
 
 
-<!-- Второй контейнер - темы курсов -->
-<div class="topics-we-teach container">
-    <h3 class="topics-cards-title general-heading">Главные темы на сегодня</h3>
-    <div class="topics-cards-box">
-        <div class="topic-card">
-            <img class="topic-card-img" src="static/img/topic-card-1.svg" alt="Transformation">
-            <h4 class="general-heading-mini">Цифровая трансформация</h4>
-            <p class="general-text">Узнайте что дает цифровая трансформация и как управлять управлять изменениями бизнеса</p>
-            <a href="#" class="topic-card-link">Подробнее</a>
-        </div>
+    <!-- Второй контейнер - темы курсов -->
+    <div class="topics-we-teach container">
+        <h3 class="topics-cards-title general-heading">Главные темы на {% now "d.m.Y" %}</h3>
+        <div class="topics-cards-box">
+            <div class="topic-card">
+                <img class="topic-card-img" src="{% static 'img/topic-card-1.svg' %}" alt="Transformation">
+                <h4 class="general-heading-mini">Цифровая трансформация</h4>
+                <p class="general-text">Узнайте что дает цифровая трансформация и как управлять управлять изменениями бизнеса</p>
+                <a href="#" class="topic-card-link">Подробнее</a>
+            </div>
 
-        <div class="topic-card">
-            <img class="topic-card-img" src="static/img/topic-card-2.svg" alt="Development">
-            <h4 class="general-heading-mini">Разработка цифровых продуктов</h4>
-            <p class="general-text">Узнайте как запустить цифровой продукт для внутреннего или внешнего клиента</p>
-            <a href="#" class="topic-card-link">Подробнее</a>
-        </div>
+            <div class="topic-card">
+                <img class="topic-card-img" src="{% static 'img/topic-card-2.svg' %}" alt="Development">
+                <h4 class="general-heading-mini">Разработка цифровых продуктов</h4>
+                <p class="general-text">Узнайте как запустить цифровой продукт для внутреннего или внешнего клиента</p>
+                <a href="#" class="topic-card-link">Подробнее</a>
+            </div>
 
-        <div class="topic-card">
-            <img class="topic-card-img" src="static/img/topic-card-3.svg" alt="Design">
-            <h4 class="general-heading-mini">Сервисный дизайн</h4>
-            <p class="general-text">Узнайте как разрабатывать сервисы, которые буду приносить прибыль вам и счастье клиентам</p>
-            <a href="#" class="topic-card-link">Подробнее</a>
+            <div class="topic-card">
+                <img class="topic-card-img" src="{% static 'img/topic-card-3.svg' %}" alt="Design">
+                <h4 class="general-heading-mini">Сервисный дизайн</h4>
+                <p class="general-text">Узнайте как разрабатывать сервисы, которые буду приносить прибыль вам и счастье клиентам</p>
+                <a href="#" class="topic-card-link">Подробнее</a>
+            </div>
         </div>
     </div>
-</div>
-<!-- Второй контейнер - темы курсов -->
+    <!-- Второй контейнер - темы курсов -->
 
 
-<!-- Текст для контейнера с популярными курсами -->
-<div class="featured-courses container">
-    <h3 class="general-heading">Популярные курсы</h3>
-    <p class="featured-courses-text">Найдите программу обучения, подходящую вам. Большой курс или интенсив на пару часов? Выбор за вами.</p>
-    <div class="featured-courses-item">
-        <img src="static/img/course-img-1.png" alt="Course" class="featured-courses-img">
-        <p class="featured-courses-title">Интернет вещей: Введение</p>
-    </div>
-    <div class="featured-courses-group">
-        <div class="featured-courses-item featured-courses-item-margin">
-            <img src="static/img/course-img-2.png" alt="Course" class="featured-courses-img">
-            <p class="featured-courses-title">Проектирование мобильного приложения</p>
-        </div>
+    <!-- Текст для контейнера с популярными курсами -->
+    <div class="featured-courses container">
+        <h3 class="general-heading">Популярные курсы</h3>
+        <p class="featured-courses-text">Найдите программу обучения, подходящую вам. Большой курс или интенсив на пару часов? Выбор за вами.</p>
         <div class="featured-courses-item">
-            <img src="static/img/course-img-3.png" alt="Course" class="featured-courses-img">
-            <p class="featured-courses-title">Внедрение BI систем</p>
+            <img src="{% static 'img/course-img-1.png' %}" alt="Course" class="featured-courses-img">
+            <p class="featured-courses-title">Интернет вещей: Введение</p>
         </div>
-    </div>
-</div>
-<!-- Текст для контейнера с популярными курсами -->
-
-
-<!-- Подвал -->
-<div class="footer footer-first-box">
-    <div class="container">
-        <div class="footer-feedback">
-            <div class="footer-feedback-text-box">
-                <h3 class="footer-feedback-heading">Есть вопросы?</h3>
-                <p class="footer-feedback-text">Напишите нам! Воспользуйтесь формой на сайте или свяжитесь с нами через контакты ниже.</p>
+        <div class="featured-courses-group">
+            <div class="featured-courses-item featured-courses-item-margin">
+                <img src="{% static 'img/course-img-2.png' %}" alt="Course" class="featured-courses-img">
+                <p class="featured-courses-title">Проектирование мобильного приложения</p>
             </div>
-            <div class="footer-feedback-button-box">
-                <a href="contacts.html" class="footer-feedback-button">Контакты</a>
+            <div class="featured-courses-item">
+                <img src="{% static 'img/course-img-3.png' %}" alt="Course" class="featured-courses-img">
+                <p class="featured-courses-title">Внедрение BI систем</p>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="container">
-            <div class="footer-contacts">
-                <p class="footer-contacts-item">Rapport Online: Rapport E-Learning</p>
-                <p class="footer-contacts-item">+79161010100</p>
-                <p class="footer-contacts-item">info@raport.ru</p>
-            </div>
-            <p class="footer-rights-reserved">2021 Все права защищены</p>
-        </div>
-    </div>
-</div>
-<!-- Подвал -->
+    <!-- Текст для контейнера с популярными курсами -->
 
-</body>
-</html>
+{% endblock %}

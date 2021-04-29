@@ -1,117 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Задание 1 Домашка 5</title>
-    {% load static %}
-    <link href="{% static 'style.css' %}" rel="stylesheet">
+{% extends 'mainapp/base.html' %}
 
-</head>
-<body>
+{% load static %}
 
-<div class="page-container">
-
-
-    <div class="container landing-top-content">
-        <!-- Навигационная панель -->
-        <div class="navbar">
-            <ul class="navbar-items">
-                <li class="navbar-item"><img class="navbar-logo" src="{% static 'img/logo.png'%}" alt="Rapport E-Learning"></li>
-                <li class="navbar-item"><a href="index.html">Главная</a></li>
-                <li class="navbar-item"><a href="catalog.html">Каталог</a></li>
-                <li class="navbar-item"><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        <!-- Навигационная панель -->
-    </div>
+{% block content %}
 
 
     <!-- Каталог -->
     <div class="catalog-container">
         <div class="container">
-            <div id="catalog"><div class="catalog-item-card">
-                <img src="{% static 'img/courses/course02.jpeg' %}" alt="Что такое сервисный дизайн" class="catalog-item-image">
-                <p class="general-heading-mini">Что такое сервисный дизайн</p>
-                <div class="catalog-item-price-and-buy">
-                    <p class="catalog-item-price">1300 руб.</p>
-                    <a class="catalog-item-buy-button" data-item_id="1">В корзину</a>
+            <div id="catalog">
+                {% for course in courses %}
+                <div class="catalog-item-card">
+                    <img src="{% static '' %}img/courses/{{course.image}}" alt="Что такое сервисный дизайн" class="catalog-item-image">
+                    <p class="general-heading-mini">{{ course.title }}</p>
+                    <div class="catalog-item-price-and-buy">
+                        <p class="catalog-item-price">{{ course.price}} руб.</p>
+                        <a class="catalog-item-buy-button" data-item_id="{{ course.id }}">В корзину</a>
+                    </div>
                 </div>
-
-            </div><div class="catalog-item-card">
-                <img src="{% static 'img/courses/course01.jpeg' %}" alt="Проектирование мобильного приложения" class="catalog-item-image">
-                <p class="general-heading-mini">Проектирование мобильного приложения</p>
-                <div class="catalog-item-price-and-buy">
-                    <p class="catalog-item-price">10000 руб.</p>
-                    <a class="catalog-item-buy-button" data-item_id="2">В корзину</a>
-                </div>
-
-            </div><div class="catalog-item-card">
-                <img src="{% static 'img/courses/course03.jpeg' %}" alt="Управление изменениями" class="catalog-item-image">
-                <p class="general-heading-mini">Управление изменениями</p>
-                <div class="catalog-item-price-and-buy">
-                    <p class="catalog-item-price">1800 руб.</p>
-                    <a class="catalog-item-buy-button" data-item_id="3">В корзину</a>
-                </div>
-
-            </div><div class="catalog-item-card">
-                <img src="{% static 'img/courses/course04.jpg' %}" alt="Интернет вещей: Введение" class="catalog-item-image">
-                <p class="general-heading-mini">Интернет вещей: Введение</p>
-                <div class="catalog-item-price-and-buy">
-                    <p class="catalog-item-price">1600 руб.</p>
-                    <a class="catalog-item-buy-button" data-item_id="4">В корзину</a>
-                </div>
-
-            </div><div class="catalog-item-card">
-                <img src="{% static 'img/courses/course05.jpg' %}" alt="UX и UI для разрабочиков" class="catalog-item-image">
-                <p class="general-heading-mini">UX и UI для разрабочиков</p>
-                <div class="catalog-item-price-and-buy">
-                    <p class="catalog-item-price">1600 руб.</p>
-                    <a class="catalog-item-buy-button" data-item_id="5">В корзину</a>
-                </div>
-
-            </div><div class="catalog-item-card">
-                <img src="{% static 'img/courses/course06.jpg' %}" alt="Создание дизайн системы для продуктов" class="catalog-item-image">
-                <p class="general-heading-mini">Создание дизайн системы для продуктов</p>
-                <div class="catalog-item-price-and-buy">
-                    <p class="catalog-item-price">11000 руб.</p>
-                    <a class="catalog-item-buy-button" data-item_id="6">В корзину</a>
-                </div>
-
-            </div></div>
+                {%  endfor %}
+            </div>
         </div>
     </div>
     <!-- Каталог -->
 
-</div>
-
-<!-- Подвал -->
-<div class="footer footer-first-box">
-    <div class="container">
-        <div class="footer-feedback">
-            <div class="footer-feedback-text-box">
-                <h3 class="footer-feedback-heading">Есть вопросы?</h3>
-                <p class="footer-feedback-text">Напишите нам! Воспользуйтесь формой на сайте или свяжитесь с нами через контакты ниже.</p>
-            </div>
-            <div class="footer-feedback-button-box">
-                <a href="contacts.html" class="footer-feedback-button">Контакты</a>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="container">
-            <div class="footer-contacts">
-                <p class="footer-contacts-item">Rapport Online: Rapport E-Learning</p>
-                <p class="footer-contacts-item">+79161010100</p>
-                <p class="footer-contacts-item">info@raport.ru</p>
-            </div>
-            <p class="footer-rights-reserved">2021 Все права защищены</p>
-        </div>
-    </div>
-</div>
-<!-- Подвал -->
-
-</body>
-</html>
+{% endblock %}

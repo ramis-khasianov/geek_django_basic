@@ -1,0 +1,26 @@
+[
+  {
+    "model": "mainapp.coursecategory",
+    "pk": 1,
+    "fields": {
+      "name": "Онлайн-курс",
+      "description": "Короткие онлайн-курсы. Занятие онлайн в любое время."
+    }
+  },
+  {
+    "model": "mainapp.coursecategory",
+    "pk": 2,
+    "fields": {
+      "name": "Онлайн-специализация",
+      "description": "Длительный онлайн-курс. Занятия по расписанию с наставником."
+    }
+  },
+  {
+    "model": "mainapp.coursecategory",
+    "pk": 3,
+    "fields": {
+      "name": "Очный тренинг",
+      "description": "Очный курс. Занятия с преподавателем в аудитории."
+    }
+  }
+]

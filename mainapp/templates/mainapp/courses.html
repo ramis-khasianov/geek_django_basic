@@ -1,6 +1,7 @@
 {% extends 'mainapp/base.html' %}
 
 {% load static %}
+{% load humanize %}
 
 {% block content %}
 
@@ -11,10 +12,10 @@
             <div id="catalog">
                 {% for course in courses %}
                 <div class="catalog-item-card">
-                    <img src="{% static '' %}img/courses/{{course.image}}" alt="Что такое сервисный дизайн" class="catalog-item-image">
-                    <p class="general-heading-mini">{{ course.title }}</p>
+                    <img src="/media/{{course.image}}" alt="Что такое сервисный дизайн" class="catalog-item-image">
+                    <p class="general-heading-mini">{{ course.name }}</p>
                     <div class="catalog-item-price-and-buy">
-                        <p class="catalog-item-price">{{ course.price}} руб.</p>
+                        <p class="catalog-item-price">{{ course.price|floatformat:"0"|intcomma}} руб.</p>
                         <a class="catalog-item-buy-button" data-item_id="{{ course.id }}">В корзину</a>
                     </div>
                 </div>

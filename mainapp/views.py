@@ -1,9 +1,5 @@
 from django.shortcuts import render
-import os
-import json
-
-
-module_dir = os.path.dirname(__file__)
+from mainapp.models import Course, CourseCategory
 
 
 def index(requests):
@@ -11,14 +7,13 @@ def index(requests):
     return render(requests, 'mainapp/index.html', context)
 
 
-def catalog(requests):
-    json_file_path = os.path.join(module_dir, 'fixtures/courses.json')
-    courses = json.load(open(json_file_path, encoding='utf8'))
+def courses(requests):
     context = {
-        'title': 'Geekshop - Каталог',
-        'courses': courses
+        'title': 'GeekShop - Каталог',
+        'courses': Course.objects.all(),
+        'categories': CourseCategory.objects.all(),
     }
-    return render(requests, 'mainapp/catalog.html', context)
+    return render(requests, 'mainapp/courses.html', context)
 
 
 def contacts(requests):

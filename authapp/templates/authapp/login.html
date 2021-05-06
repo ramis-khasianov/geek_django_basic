@@ -1,0 +1,44 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- Заголовок страницы -->
+    <div class="general-header-banner">
+        <h2 class="general-header-banner-title">Авторизация</h2>
+    </div>
+    <!-- Заголовок страницы -->
+
+
+    <!-- Контейнер с формой входа-->
+    <div class="container">
+        <div class="form-page">
+
+            <!-- Форма для входа -->
+            <div class="login-form-container">
+
+                <form class="login-form" action="{% url 'users:login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="general-form-group-vertical">
+                        <label class="general-form-label" for="{{ form.username.id_for_label }}">Логин</label>
+                        {{ form.username }}
+                    </div>
+                    <div class="general-form-group-vertical">
+                        <label class="general-form-label" for="{{ form.password.id_for_label }}">Пароль</label>
+                        {{ form.password }}
+                    </div>
+                    <div class="general-form-group-vertical">
+                        <a class="general-form-label" href="#">Забыли пароль?</a>
+                        <input class="general-form-btn" type="submit" value="Авторизоваться">
+                    </div>
+                </form>
+            </div>
+            <!-- Форма для входа -->
+
+        </div>
+    </div>
+    <!-- Контейнер с формой входа-->
+
+
+{% endblock %}

@@ -4,77 +4,83 @@
 
 {% block content %}
 
-<!-- Заголовок страницы контактов -->
-<div class="contacts-header">
-    <h2 class="contacts-page-title">Напишите нам</h2>
-    <p class="contacts-title-comment">Мы всегда открыты к вопросам и предложениями. Наша цель - счастливые клиенты, мы всегда рады обратной связи от вас.</p>
-</div>
-<!-- Заголовок страницы контактов -->
-
-
-<!-- Контейнер с контактами и формой связи-->
-<div class="container">
-    <div class="contacts-row">
-
-        <!-- Контакты которые слева -->
-        <div class="contacts-list-container">
-            <img class="contacts-image" src="{% static 'img/contact.png' %}" alt="contact us">
-            <div class="contacts-address">
-                <h4 class="contacts-title">Адрес</h4>
-                <p class="contacts-address-text">г. Москва, Пресненская набережная, дом 66</p>
-            </div>
-
-            <div class="contacts-address">
-                <h4 class="contacts-title">Телефон</h4>
-                <ul class="contacts-list-items">
-                    <li>+79161010100</li>
-                    <li>+79161010101</li>
-                </ul>
-            </div>
-
-            <div class="contacts-online">
-                <h4  class="contacts-title">Онлайн контакты</h4>
-                <ul class="contacts-list-items">
-                    <li><a href="index.html">raport.ru</a></li>
-                    <li><a href="mailto:info@elefut.com">info@raport.ru</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Контакты которые слева -->
-
-        <!-- Форма для связи которая справа -->
-        <div class="contact-form-container">
-            <p class="contact-form-title">Сообщение</p>
-            <form class="contact-form" action="#">
-                <label class="contact-form-label" for="name">Имя</label>
-                <input id="name" class="contact-form-input" type="text" placeholder="Ваше имя">
-                <label class="contact-form-label" for="email">Email</label>
-                <input id="email" class="contact-form-input" type="email" placeholder="Ваш email">
-                <label class="contact-form-label" for="message">Сообщение</label>
-                <textarea id="message" class="contact-form-input" placeholder="Ваше сообщение" rows="5"></textarea>
-                <button class="contact-form-btn" type="submit">Отправить</button>
-            </form>
-        </div>
-        <!-- Форма для связи которая справа -->
-
+    <!-- Заголовок страницы контактов -->
+    <div class="general-header-banner">
+        <h2 class="general-header-banner-title">Напишите нам</h2>
+        <p class="contacts-title-comment">Мы всегда открыты к вопросам и предложениями. Наша цель - счастливые клиенты, мы всегда рады обратной связи от вас.</p>
     </div>
-</div>
-<!-- Контейнер с контактами и формой связи-->
+    <!-- Заголовок страницы контактов -->
 
 
-<!-- Виджет с картой -->
-<div class="container">
+    <!-- Контейнер с контактами и формой связи-->
+    <div class="container">
+        <div class="contacts-row">
 
+            <!-- Контакты которые слева -->
+            <div class="contacts-list-container">
+                <img class="contacts-image" src="{% static 'img/contact.png' %}" alt="contact us">
+                <div class="contacts-address">
+                    <h4 class="contacts-title">Адрес</h4>
+                    <p class="contacts-address-text">г. Москва, Пресненская набережная, дом 66</p>
+                </div>
 
-    <div class="contacts-map">
-        <div style="position:relative;overflow:hidden;">
-            <a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a>
-            <a href="https://yandex.ru/maps/213/moscow/house/1_y_krasnogvardeyskiy_proyezd_11/Z04YcwNgQUUFQFtvfXt0cXRrYA==/?ll=37.542023%2C55.748919&utm_medium=mapframe&utm_source=maps&z=16.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">1-й Красногвардейский проезд, 11 — Яндекс.Карты</a>
-            <iframe src="https://yandex.ru/map-widget/v1/-/CCUMnJw6oC" width="100%" height="480" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                <div class="contacts-address">
+                    <h4 class="contacts-title">Телефон</h4>
+                    <ul class="contacts-list-items">
+                        <li>+79161010100</li>
+                        <li>+79161010101</li>
+                    </ul>
+                </div>
+
+                <div class="contacts-online">
+                    <h4  class="contacts-title">Онлайн контакты</h4>
+                    <ul class="contacts-list-items">
+                        <li><a href="index.html">raport.ru</a></li>
+                        <li><a href="mailto:info@elefut.com">info@raport.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Контакты которые слева -->
+
+            <!-- Форма для связи которая справа -->
+            <div class="contact-form-container">
+                <p class="contact-form-title">Сообщение</p>
+                <form class="contact-form" action="#">
+                    <div class="general-form-group-vertical">
+                        <label class="general-form-label" for="name">Имя</label>
+                        <input id="name" class="general-form-input" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="general-form-group-vertical">
+                        <label class="general-form-label" for="email">Email</label>
+                        <input id="email" class="general-form-input" type="email" placeholder="Ваш email">
+                    </div>
+                    <div class="general-form-group-vertical">
+                        <label class="general-form-label" for="message">Сообщение</label>
+                        <textarea id="message" class="general-form-input" placeholder="Ваше сообщение" rows="5"></textarea>
+                    </div>
+                    <button class="general-form-btn" type="submit">Отправить</button>
+                </form>
+            </div>
+            <!-- Форма для связи которая справа -->
+
         </div>
     </div>
-</div>
-<!-- Виджет с картой -->
+    <!-- Контейнер с контактами и формой связи-->
+
+
+    <!-- Виджет с картой -->
+    <div class="container">
+
+
+        <div class="contacts-map">
+            <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a>
+                <a href="https://yandex.ru/maps/213/moscow/house/1_y_krasnogvardeyskiy_proyezd_11/Z04YcwNgQUUFQFtvfXt0cXRrYA==/?ll=37.542023%2C55.748919&utm_medium=mapframe&utm_source=maps&z=16.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">1-й Красногвардейский проезд, 11 — Яндекс.Карты</a>
+                <iframe src="https://yandex.ru/map-widget/v1/-/CCUMnJw6oC" width="100%" height="480" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Виджет с картой -->
 
 
 {% endblock %}

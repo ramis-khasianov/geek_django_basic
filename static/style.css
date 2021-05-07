@@ -50,6 +50,86 @@ body {
     margin-bottom: 14px;
 }
 
+
+.general-header-banner {
+    background-image: url("img/contact-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.general-header-banner-title {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 74px;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.general-form-group-vertical {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    flex-grow: 1;
+    margin-right: 8px;
+}
+
+.general-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.general-form-label {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.general-form-input {
+    border: 1px solid rgba(53, 110, 173, 0.4);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 12px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    outline: none;
+}
+
+.general-form-input:focus {
+    border: 1px solid rgba(53, 110, 173, 0.8);
+}
+
+.general-form-input::placeholder{
+    color: #1F3F68;
+    opacity: 0.4;
+}
+
+.general-form-btn {
+    margin-top: 50px;
+    height: 72px;
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    padding: 0;
+    border: none;
+}
+
 /* general elements */
 
 
@@ -57,13 +137,21 @@ body {
 .navbar {
     height: 120px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
 }
 
 .navbar-items {
     display: flex;
     justify-content: left;
     list-style-type:none;
+}
+
+.navbar-user-profile {
+    display: flex;
+    justify-content: right;
+    list-style: none;
 }
 
 .navbar-logo {
@@ -375,27 +463,6 @@ body {
 
 /* Contact us */
 
-.contacts-header {
-    background-image: url("img/contact-background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 250px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.contacts-page-title {
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 44px;
-    line-height: 74px;
-    text-align: center;
-    letter-spacing: 0.04em;
-}
-
 .contacts-title-comment {
     color: #FFFFFF;
     max-width: 780px;
@@ -479,44 +546,48 @@ body {
     margin: 0 56px 56px;
 }
 
-.contact-form-label {
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.04em;
-    color: #1F3F68;
-    opacity: 0.8;
-    margin-bottom: 8px;
-}
-
-.contact-form-input {
-    border: 1px solid #356EAD;
-    box-sizing: border-box;
-    opacity: 0.4;
-    border-radius: 10px;
-    margin-bottom: 32px;
-    padding: 21px 12px 21px;
-    letter-spacing: 0.04em;
-    color: #1F3F68;
-}
-
-.contact-form-btn {
-    margin-top: 50px;
-    height: 72px;
-    background: #5A98D0;
-    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: #FFFFFF;
-    padding: 0;
-    border: none;
-}
-
 
 /* contact us */
+
+
+/* Login and register */
+
+.form-page {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-container {
+    margin-top: 96px;
+    width: 540px;
+    height: 500px;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 56px;
+}
+
+.register-form-container {
+    margin-top: 96px;
+    width: 800px;
+    height: 680px;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 56px;
+}
+
+/* login and register */
 
 
 /* Media queries */

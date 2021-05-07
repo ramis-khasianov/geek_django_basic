@@ -28,8 +28,19 @@
         <ul class="navbar-items">
             <li class="navbar-item"><img class="navbar-logo" src="{% static 'img/logo.png' %}" alt="Rapport E-Learning"></li>
             <li class="navbar-item"><a href="{% url 'index' %}">Главная</a></li>
-            <li class="navbar-item"><a href="{% url 'catalog' %}">Каталог</a></li>
-            <li class="navbar-item"><a href="{% url 'contacts' %}">Контакты</a></li>
+            <li class="navbar-item"><a href="{% url 'mainapp:index' %}">Каталог</a></li>
+        </ul>
+        <ul class="navbar-user-profile">
+            {% if user.is_superuser %}
+                <li class="navbar-item"><a href="{% url 'admin:index' %}">Админка</a></li>
+            {% endif %}
+            {% if user.is_authenticated %}
+                <li class="navbar-item"><a href="#">{{ user.email }}</a></li>
+                <li class="navbar-item"><a href="{% url 'authapp:logout' %}">Выйти</a></li>
+            {% else %}
+                <li class="navbar-item"><a href="{% url 'authapp:login' %}">Войти</a></li>
+                <li class="navbar-item"><a href="{% url 'authapp:register' %}">Зарегистрироваться</a></li>
+            {% endif %}
         </ul>
     </div>
 </div>
@@ -52,7 +63,7 @@
                 <p class="footer-feedback-text">Напишите нам! Воспользуйтесь формой на сайте или свяжитесь с нами через контакты ниже.</p>
             </div>
             <div class="footer-feedback-button-box">
-                <a href="contacts.html" class="footer-feedback-button">Контакты</a>
+                <a href="{% url 'contacts' %}" class="footer-feedback-button">Контакты</a>
             </div>
         </div>
     </div>

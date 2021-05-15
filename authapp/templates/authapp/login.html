@@ -15,6 +15,28 @@
     <div class="container">
         <div class="form-page">
 
+            <!-- Ошибки -->
+            {% if messages or form.non_field_errors %}
+                <div class="form-alert-container
+             {% if messages %} form-alert-success {% else %} form-alert-warning {% endif %}" role="alert">
+                    <div class="login-form-alert">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        {% else %}
+                            {% for error in form.non_field_errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <button type="button" class="form-alert-dismiss-button" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+            <!-- Ошибки -->
+
             <!-- Форма для входа -->
             <div class="login-form-container">
 

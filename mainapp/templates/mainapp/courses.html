@@ -16,7 +16,7 @@
                     <p class="general-heading-mini">{{ course.name }}</p>
                     <div class="catalog-item-price-and-buy">
                         <p class="catalog-item-price">{{ course.price|floatformat:"0"|intcomma}} руб.</p>
-                        <a class="catalog-item-buy-button" data-item_id="{{ course.id }}">В корзину</a>
+                        <a class="catalog-item-buy-button" href="{% url 'baskets:basket_add' course.id %}">В корзину</a>
                     </div>
                 </div>
                 {%  endfor %}

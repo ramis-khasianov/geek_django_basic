@@ -1,0 +1,28 @@
+{% load static %}
+{% load humanize %}
+
+<div class="basket-container">
+    {% if baskets %}
+
+        {% for basket_item in baskets %}
+            <div class="basket-item-row">
+                <img src=" {{ basket_item.course.image.url }}" class="basket-item-image" alt="">
+                <div class="basket-item-name">{{ basket_item.course.name }}</div>
+                <div class="basket-item-price">{{ basket_item.course.price }}</div>
+                <a class="basket-item-remove" href="{% url 'baskets:basket_remove' basket_item.id %}">
+                    Удалить из корзины
+                </a>
+            </div>
+        {% endfor %}
+        <div class="basket-summary-row">
+            <p>В корзине <span>{{ basket_count|floatformat:"0"|intcomma }}</span> товаров на сумму <span>{{ basket_sum }}</span> рублей.</p>
+            <a href="#" class="general-btn">Оформить заказ</a>
+        </div>
+
+    {% else %}
+        <div class="basket-summary-row">
+            <p class="general-heading">Корзина пуста</p>
+            <a href="{% url 'mainapp:index' %}" class="general-btn">Начать покупки</a>
+        </div>
+    {% endif %}
+</div>

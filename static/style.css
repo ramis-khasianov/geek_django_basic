@@ -50,6 +50,23 @@ body {
     margin-bottom: 14px;
 }
 
+.general-btn {
+    margin-top: 50px;
+    height: 60px;
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    padding: 0;
+    border: none;
+    width: 200px;
+    text-decoration: none;
+}
 
 .general-header-banner {
     background-image: url("img/contact-background.jpg");
@@ -448,6 +465,7 @@ body {
 
 .catalog-item-buy-button {
     font-size: 12px;
+    text-decoration: none;
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.04em;
@@ -465,6 +483,61 @@ body {
 }
 
 /* каталог */
+
+
+/* Корзина */
+
+.basket-container {
+    min-height: 600px;
+}
+
+.basket-item-row {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 140px;
+    margin: 15px 0;
+    padding: 0 15px;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.basket-item-image {
+    height: 100px;
+    width: 160px;
+}
+
+.basket-item-name {
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.basket-item-price {
+    width: 80px;
+    margin: 10px;
+}
+
+.basket-item-remove {
+    height: 25px;
+    width: 160px;
+    margin: 0 5px;
+}
+
+.basket-summary-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFFFFF;
+    text-align: right;
+    height: 160px;
+    margin: 20px 0;
+    padding: 0 15px;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+}
+
+/* корзина */
 
 
 /* Contact us */

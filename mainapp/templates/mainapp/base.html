@@ -36,6 +36,7 @@
                 <li class="navbar-item"><a href="{% url 'admin:index' %}">Админка</a></li>
             {% endif %}
             {% if user.is_authenticated %}
+                <li class="navbar-item"><a href="{% url 'basketapp:basket_view' %}">Корзина</a></li>
                 <li class="navbar-item"><a href="{% url 'authapp:profile' %}">{{ user.email }}</a></li>
                 <li class="navbar-item"><a href="{% url 'authapp:logout' %}">Выйти</a></li>
             {% else %}

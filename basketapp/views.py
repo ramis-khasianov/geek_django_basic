@@ -1,6 +1,7 @@
 from django.shortcuts import HttpResponseRedirect, render
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
-from django.db.models import Sum
+from django.template.loader import render_to_string
 from mainapp.models import Course
 from basketapp.models import Basket
 
@@ -29,15 +30,22 @@ def basket_remove(request, id):
 @login_required
 def basket_view(requests):
     basket = Basket.objects.filter(user=requests.user)
-    basket_count = 0
-    basket_sum = 0
-    for item in basket:
-        basket_count += item.quantity
-        basket_sum += item.sum()
     context = {
         'title': 'GeekShop - Корзина',
         'baskets': basket,
-        'basket_count': basket_count,
-        'basket_sum': basket_sum
     }
-    return render(requests, 'basket/basket-view.html', context)
+    return render(requests, 'basketapp/basket-view.html', context)
+
+
+def basket_edit(request, id, quantity):
+    if request.is_ajax():
+        basket = Basket.objects.get(id=id)
+        if quantity > 0:
+            basket.quantity = quantity
+            basket.save()
+        else:
+            basket.delete()
+        baskets = Basket.objects.filter(user=request.user)
+        context = {'baskets': baskets}
+        result = render_to_string('basketapp/basket.html', context)
+        return JsonResponse({'result': result})

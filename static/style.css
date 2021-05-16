@@ -51,8 +51,8 @@ body {
 }
 
 .general-btn {
-    margin-top: 50px;
-    height: 60px;
+    padding: 12px;
+    margin-top: 24px;
     background: #5A98D0;
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     border-radius: 4px;
@@ -62,9 +62,7 @@ body {
     text-align: center;
     letter-spacing: 0.04em;
     color: #FFFFFF;
-    padding: 0;
     border: none;
-    width: 200px;
     text-decoration: none;
 }
 
@@ -520,20 +518,30 @@ body {
 }
 
 .basket-item-remove {
-    height: 25px;
-    width: 160px;
-    margin: 0 5px;
+    width: 90px;
+    margin: 10px;
 }
 
 .basket-summary-row {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
     background: #FFFFFF;
     text-align: right;
     height: 160px;
     margin: 20px 0;
     padding: 0 15px;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+}
+
+
+.basket-empty-row {
+    display: flex;
+    background: #FFFFFF;
+    height: 80px;
+    margin: 20px 0;
+    padding: 24px;
     box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
 }
 
@@ -724,6 +732,10 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: 56px;
+}
+
+.profile-form-alert {
+    width: 968px;
 }
 
 .profile-form-container {

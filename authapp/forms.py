@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 
 from authapp.models import User
 
@@ -27,8 +27,23 @@ class UserRegisterForm(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'general-form-input', 'placeholder': 'Введите пароль'}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'general-form-input', 'placeholder': 'Подтвердите пароль'}))
+        'class': 'general-form-input', 'placeholder': 'Подтвердите пароль'}), help_text='Пароль')
 
     class Meta:
         model = User
         fields = ('username', 'email', 'first_name', 'last_name', 'password1', 'password2')
+        labels = {
+            'password2': 'Пароль'
+        }
+
+
+class UserProfileForm(UserChangeForm):
+    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'general-form-input', 'readonly': True}))
+    email = forms.CharField(widget=forms.EmailInput(attrs={'class': 'general-form-input', 'readonly': True}))
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'general-form-input'}))
+    last_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'general-form-input'}))
+    image = forms.ImageField(widget=forms.FileInput(attrs={'class': 'general-form-input'}), required=False)
+
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'first_name', 'last_name', 'image')

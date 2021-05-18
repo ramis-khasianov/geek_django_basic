@@ -1,0 +1,31 @@
+{% load static %}
+{% load humanize %}
+
+<div class="basket-container">
+    {% if baskets %}
+
+        {% for basket_item in baskets %}
+            <div class="basket-item-row">
+                <img src=" {{ basket_item.course.image.url }}" class="basket-item-image" alt="">
+                <div class="basket-item-name">{{ basket_item.course.name }}</div>
+
+                <input name="{{ basket_item.id }}" type="number" class="basket-item-quantity" value="{{ basket_item.quantity }}" min="0">
+                <div class="basket-item-price">{{ basket_item.course.price|floatformat:"0"|intcomma }} руб.</div>
+
+                <a class="basket-item-remove" href="{% url 'baskets:basket_remove' basket_item.id %}">
+                    Удалить
+                </a>
+            </div>
+        {% endfor %}
+        <div class="basket-summary-row">
+            <p>В корзине <span>{{ baskets.0.total_quantity }}</span> товаров на сумму <span>{{ baskets.0.total_sum|floatformat:"0"|intcomma }}</span> рублей.</p>
+            <a href="#" class="general-btn">Оформить заказ</a>
+        </div>
+
+    {% else %}
+        <div class="basket-empty-row">
+            <p class="general-text">Корзина пока пуста. Давайте <a href="{% url 'mainapp:index' %}">начнем покупки</a>?</p>
+
+        </div>
+    {% endif %}
+</div>

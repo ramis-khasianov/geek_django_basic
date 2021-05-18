@@ -1,0 +1,17 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+
+    <!-- Каталог -->
+    <div class="catalog-container">
+        <div class="container">
+            {% include 'basketapp/basket.html' %}
+        </div>
+    </div>
+    <!-- Каталог -->
+
+{% endblock %}

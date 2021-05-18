@@ -1,0 +1,81 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+    <!-- Контейнер с формой входа-->
+    <div class="container">
+        <div class="form-page">
+
+            {% if messages or form.non_field_errors %}
+                <div class="form-alert-container {% if messages %} form-alert-success {% else %} form-alert-warning {% endif %}" role="alert">
+                    <div class="profile-form-alert">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        {% else %}
+                            {% for error in form.non_field_errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <button type="button" class="form-alert-dismiss-button" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+
+            <!-- Форма для изменения профиля -->
+            <div class="profile-form-container">
+
+                <form class="profile-form" action="{% url 'users:profile' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="profile-form-image-container">
+                        <img src="{% if user.image %} {{ user.image.url }} {% else %} {% static 'img/profile.png' %} {% endif %}"
+                             alt="'profile-image" class="profile-form-image">
+                    </div>
+                    <div class="profile-form-text-container">
+                        <div class="general-form-row">
+                            <div class="general-form-group-vertical ">
+                                <label class="general-form-label" for="{{ form.first_name.id_for_label }}">Имя</label>
+                                {{ form.first_name }}
+                            </div>
+                            <div class="general-form-group-vertical">
+                                <label class="general-form-label" for="{{ form.last_name.id_for_label }}">Фамилия</label>
+                                {{ form.last_name }}
+                            </div>
+                        </div>
+                        <div class="general-form-row">
+                            <div class="general-form-group-vertical">
+                                <label class="general-form-label" for="{{ form.username.id_for_label }}">Логин</label>
+                                {{ form.username }}
+                            </div>
+                            <div class="general-form-group-vertical">
+                                <label class="general-form-label" for="{{ form.email.id_for_label }}">Адрес электронной
+                                    почты</label>
+                                {{ form.email }}
+                            </div>
+                        </div>
+
+                        <div class="general-form-group-vertical">
+                            <label class="general-form-label" for="{{ form.image.id_for_label }}">Выбрать изображение</label>
+                            {{ form.image }}
+                        </div>
+                        <div class="general-form-group-vertical">
+                            <input class="general-form-btn" type="submit" value="Изменить аккаунт">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Форма для изменения профиля -->
+
+        </div>
+    </div>
+    <!-- Контейнер с формой входа-->
+
+
+{% endblock %}

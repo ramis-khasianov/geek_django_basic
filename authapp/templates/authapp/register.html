@@ -15,6 +15,17 @@
     <div class="container">
         <div class="form-page">
 
+            {% if form.errors %}
+                <div class="form-alert-container form-alert-warning" role="alert">
+                    <div class="register-form-alert">
+                        {{ form.errors|escape }}
+                    </div>
+                    <button type="button" class="form-alert-dismiss-button" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+
             <!-- Форма для входа -->
             <div class="register-form-container">
 
@@ -32,7 +43,7 @@
                     </div>
 
                     <div class="general-form-group-vertical">
-                        <label class="general-form-label" for="inputUsername">Логин</label>
+                        <label class="general-form-label" for="{{ form.username.id_for_label }}">Логин</label>
                         {{ form.username }}
                     </div>
                     <div class="general-form-group-vertical">

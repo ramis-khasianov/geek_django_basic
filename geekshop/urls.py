@@ -26,6 +26,7 @@ urlpatterns = [
     path('users/', include('authapp.urls', namespace='users')),
     path('contacts/', contacts, name='contacts'),
     path('baskets/', include('basketapp.urls', namespace='baskets')),
+    path('admin-staff/', include('adminapp.urls', namespace='admin_staff'))
 ]
 
 if settings.DEBUG:

@@ -785,6 +785,112 @@ body {
 /* login register and profile */
 
 
+/* Admin */
+
+.admin-page-container {
+    min-height: 100vh;
+    display: flex;
+}
+
+.admin-sidebar {
+    width: 240px;
+    background-color: #1F3F68;
+    padding-top: 48px;
+}
+
+.admin-sidebar-items {
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+}
+
+.admin-sidebar-item {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+}
+
+.admin-sidebar-profile-header {
+    margin-top: 20px;
+    color: #DDDDDD;
+    padding: 15px 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+}
+
+.admin-sidebar-item:hover {
+    color: #DDDDDD;
+    text-decoration: none;
+}
+
+.admin-page-content {
+    width: calc(100% - 240px);
+}
+
+.admin-page-heading {
+    margin: 10px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+}
+
+.admin-container {
+    margin: 16px;
+    padding: 8px 0;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+}
+
+.admin-btn {
+    display: block;
+    width: 240px;
+    margin: 16px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    border: none;
+    text-decoration: none;
+}
+
+.admin-delete-btn {
+    background: #d05a5a;
+    box-shadow: 5px 20px 50px rgba(177, 16, 16, 0.2);
+}
+
+.admin-table {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding-bottom: 24px;
+}
+
+.admin-table tr {
+    height: 48px;
+}
+
+.admin-table td, th {
+    padding-left: 16px;
+}
+
+/* admin */
+
+
 /* Media queries */
 
 @media (max-width: 1024px) {

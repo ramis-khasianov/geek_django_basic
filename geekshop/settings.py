@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'authapp',
     'mainapp',
-    'basketapp'
+    'basketapp',
+    'adminapp'
 ]
 
 MIDDLEWARE = [

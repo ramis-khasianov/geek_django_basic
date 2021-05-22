@@ -1,0 +1,51 @@
+{% extends 'adminapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <h1 class="admin-page-heading">
+        Изменить пользователя
+    </h1>
+    <div class="admin-container">
+
+        <form class="register-form" action="{% url 'admin_staff:admin_users_create' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="general-form-row">
+                <div class="general-form-group-vertical ">
+                    <label class="general-form-label" for="{{ form.first_name.id_for_label }}">Имя</label>
+                    {{ form.first_name }}
+                </div>
+                <div class="general-form-group-vertical">
+                    <label class="general-form-label" for="{{ form.last_name.id_for_label }}">Фамилия</label>
+                    {{ form.last_name }}
+                </div>
+            </div>
+
+            <div class="general-form-group-vertical">
+                <label class="general-form-label" for="{{ form.username.id_for_label }}">Логин</label>
+                {{ form.username }}
+            </div>
+            <div class="general-form-group-vertical">
+                <label class="general-form-label" for="{{ form.email.id_for_label }}">Адрес электронной
+                    почты</label>
+                {{ form.email }}
+            </div>
+            <div class="general-form-row">
+                <div class="general-form-group-vertical">
+                    <label class="general-form-label" for="{{ form.password1.id_for_label }}">Пароль</label>
+                    {{ form.password1 }}
+                </div>
+                <div class="general-form-group-vertical">
+                    <label class="general-form-label" for="{{ form.password2.id_for_label }}">Подтверждение пароля</label>
+                    {{ form.password2 }}
+                </div>
+            </div>
+            <div class="general-form-group-vertical">
+                <input class="general-form-btn" type="submit" value="Создать аккаунт">
+            </div>
+        </form>
+
+    </div>
+
+
+{% endblock %}

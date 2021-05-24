@@ -1,0 +1,56 @@
+{% extends 'adminapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <h1 class="admin-page-heading">
+        Изменить пользователя
+    </h1>
+    <div class="admin-container">
+
+
+        <form class="profile-form" action="{% url 'admin_staff:admin_users_update' selected_user.id %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="profile-form-image-container">
+                <img src="{% if user.image %} {{ user.image.url }} {% else %} {% static 'img/profile.png' %} {% endif %}"
+                     alt="'profile-image" class="profile-form-image">
+            </div>
+            <div class="profile-form-text-container">
+                <div class="general-form-row">
+                    <div class="general-form-group-vertical ">
+                        <label class="general-form-label" for="{{ form.first_name.id_for_label }}">Имя</label>
+                        {{ form.first_name }}
+                    </div>
+                    <div class="general-form-group-vertical">
+                        <label class="general-form-label" for="{{ form.last_name.id_for_label }}">Фамилия</label>
+                        {{ form.last_name }}
+                    </div>
+                </div>
+                <div class="general-form-row">
+                    <div class="general-form-group-vertical">
+                        <label class="general-form-label" for="{{ form.username.id_for_label }}">Логин</label>
+                        {{ form.username }}
+                    </div>
+                    <div class="general-form-group-vertical">
+                        <label class="general-form-label" for="{{ form.email.id_for_label }}">Адрес электронной
+                            почты</label>
+                        {{ form.email }}
+                    </div>
+                </div>
+
+                <div class="general-form-group-vertical">
+                    <label class="general-form-label" for="{{ form.image.id_for_label }}">Выбрать изображение</label>
+                    {{ form.image }}
+                </div>
+                <div class="general-form-group-vertical">
+                    <div class="general-form-row">
+                        <input class="admin-btn" type="submit" value="Сохранить">
+                        <a class="admin-btn admin-delete-btn" href="{% url 'admin_staff:admin_users_remove' selected_user.id %}">Удалить</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+{% endblock %}

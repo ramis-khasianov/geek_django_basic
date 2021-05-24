@@ -33,7 +33,7 @@
         </ul>
         <ul class="navbar-user-profile">
             {% if user.is_superuser %}
-                <li class="navbar-item"><a href="{% url 'admin:index' %}">Админка</a></li>
+                <li class="navbar-item"><a href="{% url 'admin_staff:index' %}">Админка</a></li>
             {% endif %}
             {% if user.is_authenticated %}
                 <li class="navbar-item"><a href="{% url 'basketapp:basket_view' %}">Корзина</a></li>

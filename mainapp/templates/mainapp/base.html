@@ -44,7 +44,7 @@
                             {%  endif %}
                     </a>
                 </li>
-                <li class="navbar-item"><a href="{% url 'authapp:profile' %}">{{ user.email }}</a></li>
+                <li class="navbar-item"><a href="{% url 'authapp:profile' %}">{{ user.username }}</a></li>
                 <li class="navbar-item"><a href="{% url 'authapp:logout' %}">Выйти</a></li>
             {% else %}
                 <li class="navbar-item"><a href="{% url 'authapp:login' %}">Войти</a></li>

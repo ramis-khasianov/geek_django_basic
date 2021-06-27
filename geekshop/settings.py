@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'authapp',
     'mainapp',
     'basketapp',
-    'adminapp'
+    'adminapp',
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -142,24 +143,30 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Email
 
-# EMAIL_HOST = 'smtp.yandex.ru'
-# EMAIL_PORT = 465
-# EMAIL_HOST_USER = 'info@ramisport.ru'
-# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'password')
-# EMAIL_USE_SSL = True
+DOMAIN_NAME = 'http://localhost:8000'
 
-# Email django
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'django@gb.local'
-EMAIL_HOST_PASSWORD = 'geekbrains'
-EMAIL_USE_SSL = False
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'info@ramisport.ru')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'password')
+EMAIL_USE_SSL = True
 
 # python -m smtpd
-EMAIL_HOST_USER, EMAIL_HOST_PASSWORD = None, None
+# EMAIL_HOST_USER, EMAIL_HOST_PASSWORD = None, None
 # python -m smtpd -n -c DebuggingServer localhost:25
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 25
+# EMAIL_HOST_USER = 'django@gb.local'
+# EMAIL_HOST_PASSWORD = 'geekbrains'
+# EMAIL_USE_SSL = False
 
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # EMAIL_FILE_PATH = 'tmp/emails/'
 
-DOMAIN_NAME = 'http://localhost:8000'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.vk.VKOAuth2'
+)
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_VK_OAUTH2_KEY', 'info@ramisport.ru')
+SOCIAL_AUTH_VK_OAUTH2_SECRET = os.environ.get('SOCIAL_AUTH_VK_OAUTH2_SECRET', 'info@ramisport.ru')

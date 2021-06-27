@@ -64,10 +64,16 @@
                         <div class="general-form-group-vertical">
                             <label class="general-form-label" for="{{ form.image.id_for_label }}">Выбрать изображение</label>
                             {{ form.image }}
-                        </div>
-                        <div class="general-form-group-vertical">
+                            <label class="general-form-label" for="{{ profile_form.gender.id_for_label }}">Выбрать изображение</label>
+                            {{ profile_form.gender }}
+                            <label class="general-form-label" for="{{ profile_form.tagline.id_for_label }}">Тэги</label>
+                            {{ profile_form.tagline }}
+                            <label class="general-form-label" for="{{ profile_form.about_me.id_for_label }}">Обо мне</label>
+                            {{ profile_form.about_me }}
                             <input class="general-form-btn" type="submit" value="Изменить аккаунт">
                         </div>
+
+
                     </div>
                 </form>
             </div>

@@ -1,0 +1,28 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- Заголовок страницы -->
+    <div class="general-header-banner">
+        <h2 class="general-header-banner-title">Подтверждение почты</h2>
+    </div>
+    <!-- Заголовок страницы -->
+
+
+    <!-- Контейнер с сообщение -->
+    <div class="container">
+        {% if user.is_authenticated %}
+            <h1>Поздравляем</h1>
+            <p>Вы успешно зарегистрировались</p>
+        {% else %}
+            <h1>Что-то пошло не так</h1>
+            <p>Проверка аккаунта не удалась</p>
+        {% endif %}
+        <a href="{%  url 'mainapp:index' %}"></a>
+    </div>
+    <!-- Контейнер с сообщениями -->
+
+
+{% endblock %}

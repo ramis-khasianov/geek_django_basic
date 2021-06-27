@@ -65,7 +65,7 @@ class UserProfileForm(UserChangeForm):
 class UserProfileEditForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('tagline', 'about_me', 'gender')
+        fields = ('tagline', 'about_me', 'gender', 'birth_date')
 
     tagline = forms.CharField(widget=forms.TextInput(attrs={'class': 'general-form-input'}))
     about_me = forms.CharField(widget=forms.Textarea(attrs={'class': 'general-form-input', 'rows': 5}))
@@ -73,3 +73,4 @@ class UserProfileEditForm(forms.ModelForm):
         choices=UserProfile.GENDER_CHOICES,
         widget=forms.Select(attrs={'class': 'general-form-input'})
     )
+    birth_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'general-form-input'}))

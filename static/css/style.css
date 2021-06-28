@@ -120,7 +120,7 @@ body {
     outline: none;
 }
 
-.general-form-input:read-only {
+.general-form-input-read-only {
     border: 1px solid #666666;
     background-color: #DDDDDD;
     color: #666666;
@@ -754,7 +754,7 @@ body {
     margin-top: 24px;
     padding: 24px;
     width: 920px;
-    height: 560px;
+    min-height: 860px;
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
 }

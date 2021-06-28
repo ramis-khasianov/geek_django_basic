@@ -51,6 +51,9 @@
                         {{ form.password }}
                     </div>
                     <div class="general-form-group-vertical">
+                        <a class="general-form-label" href="{% url 'social:begin' 'vk-oauth2' %}?next=/">
+                            Войти через VK
+                        </a>
                         <a class="general-form-label" href="#">Забыли пароль?</a>
                         <input class="general-form-btn" type="submit" value="Авторизоваться">
                     </div>
